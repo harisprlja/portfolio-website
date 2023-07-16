@@ -1,0 +1,127 @@
+/* html,
+body {
+  overflow: hidden;
+}
+ */
+/* OVO KAD SE OBRISE NE RADI MAIN SCROLL */
+/* .s-home {
+  height: 100vh;
+} */
+
+/* I OVO KAD SE OBRISE NE RADI MAIN SCROLL */
+/* .home-content {
+  height: 100%;
+} */
+
+/* OVO KAD SE OBRISE POJAVI SE X MAIN SCROLL */
+/* .home-content__main {
+  overflow: hidden;
+} */
+
+@media only screen and (max-width:1000px) {
+
+  /* I OVO KAD SE OBRISE NE RADI MAIN SCROLL
+  ZBOG OVOG DOLE HAMBURGER POSTANE FIXED */
+
+  /* .home-content {
+    overflow-y: auto;
+  } */
+
+}
+
+.s-info {
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  overflow-x: hidden;
+  background-color: white;
+  padding: 50px 5% 0px;
+}
+
+.info-is-visible .s-info {
+  visibility: visible;
+}
+
+.info-is-visible {
+  overflow-y: hidden;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## hamburger icon
+ * ------------------------------------------------------------------- */
+
+.info-toggle {
+  z-index: 502;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.info-menu-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: -1px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  background-color: black;
+}
+
+.info-menu-icon::before,
+.info-menu-icon::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  position: absolute;
+  left: 0;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}
+
+.info-menu-icon::before {
+  top: -7px;
+  -webkit-transition-property: top, transform;
+  transition-property: top, transform;
+}
+
+.info-menu-icon::after {
+  bottom: -7px;
+  -webkit-transition-property: bottom, transform;
+  transition-property: bottom, transform;
+}
+
+.info-is-visible .info-menu-icon {
+  background-color: rgba(236, 0, 140, 0);
+}
+
+.info-is-visible .info-menu-icon::before,
+.info-is-visible .info-menu-icon::after {
+  background-color: black;
+  -webkit-transition-delay: 0s, 0.2s;
+  transition-delay: 0s, 0.2s;
+}
+
+.info-is-visible .info-menu-icon::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.info-is-visible .info-menu-icon::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
