@@ -2,6 +2,11 @@ html {
   min-height: 100%;
 }
 
+.mastodon-link {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal-body {
   background-color: #fff8c5;
 }
