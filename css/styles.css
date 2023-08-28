@@ -638,6 +638,7 @@ html {
   font-size: 25px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .card__title__link {
@@ -645,6 +646,7 @@ html {
 }
 
 .card-p-text {
+  text-align: center;
   font-family: textFont;
   color: #999;
   margin-bottom: 1.75em;
